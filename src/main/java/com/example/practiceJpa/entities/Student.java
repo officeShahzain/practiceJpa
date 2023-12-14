@@ -1,5 +1,6 @@
 package com.example.practiceJpa.entities;
 
+import com.example.practiceJpa.auditingLogs.Auditing;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -10,7 +11,7 @@ import java.util.List;
 @Getter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Student {
+public class Student extends Auditing {
     @Id
     @SequenceGenerator(name = "sequence_Id",
             sequenceName = "sequence_Id",
